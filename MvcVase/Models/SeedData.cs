@@ -28,6 +28,7 @@ namespace MvcVase.Models
                         Type = "Rustic",
                         Material = "Crystal",
                         Shape = "Trumpet",
+                        Rating = "3",
                         Antique = true
                     },
 
@@ -37,6 +38,7 @@ namespace MvcVase.Models
                         Type = "Pail",
                         Material = "Rock",
                         Shape = "Bowl",
+                        Rating = "5",
                         Antique = true
                     },
 
@@ -46,6 +48,7 @@ namespace MvcVase.Models
                         Type = "Jug/Pitcher",
                         Material = "Clay",
                         Shape = "Rotund",
+                        Rating = "2",
                         Antique = false
                     },
 
@@ -53,8 +56,9 @@ namespace MvcVase.Models
                     {
                         Name = "Casata vase",
                         Type = "Amphora",
-                        Material = "Porcelain",
+                        Material = "Plastic",
                         Shape = "Gourd",
+                        Rating = "1",
                         Antique = true
                     },
 
@@ -62,8 +66,9 @@ namespace MvcVase.Models
                     {
                         Name = "Pioneer vase",
                         Type = "Floor",
-                        Material = "Terracotta",
+                        Material = "Glass",
                         Shape = "Square",
+                        Rating = "5",
                         Antique = false
                     },
 
@@ -71,8 +76,9 @@ namespace MvcVase.Models
                     {
                         Name = "Chinese Old vase",
                         Type = "Wall",
-                        Material = "Concrete And Clay",
+                        Material = "Clay",
                         Shape = "Honeycomb",
+                        Rating = "2",
                         Antique = false
                     },
 
@@ -82,6 +88,7 @@ namespace MvcVase.Models
                         Type = "Resin",
                         Material = "Plastic",
                         Shape = "Drop Slim",
+                        Rating = "1",
                         Antique = false
                     },
 
@@ -91,6 +98,7 @@ namespace MvcVase.Models
                         Type = "Stone",
                         Material = "Wood",
                         Shape = "Sphere",
+                        Rating = "5",
                         Antique = true
                     },
 
@@ -100,6 +108,7 @@ namespace MvcVase.Models
                         Type = "Eco-Friendy",
                         Material = "Metal",
                         Shape = "Bud",
+                        Rating = "3",
                         Antique = false
                     },
 
@@ -109,6 +118,7 @@ namespace MvcVase.Models
                         Type = "Handblown",
                         Material = "Glass",
                         Shape = "Low Pan",
+                        Rating = "2",
                         Antique = true
                     }
                     );

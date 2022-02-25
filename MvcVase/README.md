@@ -149,7 +149,114 @@ Now run the application but before that make sure that you do not have any data 
 Now debug the Application
 
 2246
-Yeeeehh!!!! I ran the application and I fatched the data from the SeedData.cs file and it displayed in screen Now I can edit delete and Get details :)
+Yeeeehh!!!! I ran the application and I fetched the data from the SeedData.cs file and it displayed in screen Now I can edit delete and Get details :)
 
 END
+
+2252
+
+PART 6:
+Controller methods and views in ASP.NET Core
+
+START
+Added library DataAnnotation.Schema for the decimal value but unfortunately I don't have any decimal properties 
+
+2348
+In the VasesController set the edit method to the HTTPPOST we can also set to the GET as well but post is most secure than the GET method
+
+Check the edit Page and Form HTML code that show that convention of the code that we reqire correct date, Id and price must be a number etc... :)
+
+END
+
+0018
+PART 7:
+Add a search to an ASP.NET Core MVC App
+
+START
+0021
+Changed index method for the search the Vases by their name property so I changed the Index method of VasesController and its simple SQL code that Found This Data from this name so on......
+
+0033
+Now Chnage the Vases/Index.cshtml file
+In that file add one form tag for searching the name of the Vases and fetch the data and show only those data which matched with the perticular vases name
+
+0034
+Yeeeeehhhhh!! Now I can find the perticular vases by search filter
+0035
+Add the HTTPPOST method for the index
+
+0047
+In the form tag i added the method GET to get the searchstring into the URL 
+I ran the code successully ...:)
+
+0048
+Add the search by Material property
+
+0053
+Now Make one class name VaseMaterialViewModel in the Models and set some properties inside that by following
+Vases, Materials, VaseMaterial, SearchString 
+
+0108
+Now its time to change the VasesController file
+
+0143
+Updated data of VaseController file View/Index.cshtml file data
+In the index.cshtml file I updated the form data for the Material 
+In the Controller added the new query for the fetching the data of the Material
+
+0145
+Ran the code and apply some filter for the Material and Name of Vases and it saw the correct data by fetching the Original data
+Successfully added the search filter
+
+END
+
+PART 8:
+Add a new field to an ASP.NET Core MVC App
+START
+
+0147
+Now I added one field called Rating inside the Vase.cs with string value
+Changed VasesController file and add Bind value of Rating
+
+0213
+Chnage the all SeedData and add one more field for the Rating 
+Change every index, create, delete, details, edit cshtml files and add Rating tag
+ 
+0214
+Add Migration for the Rating 
+Update Database
+Yehhh!! Ran successfully with the rating data :)
+
+END
+
+0215
+
+PART 8:
+START
+
+Add the validation rule for the Vase model
+
+0223
+Now Updated the Vase.cshtml fiel
+Add Required field 
+No field will be empty 
+Set the minimum value for the every field like no more than 60 and no minimum of 3 etc..
+
+0224
+Now Ran the code and check the entry It saw an error for the field which not follow the convention of the given conditions
+Sucessfully Ran  :)
+
+END
+
+0227
+PART 10:
+Examin the Details and Delete methods of ASP.NET Core
+START
+
+Examined the Details and Delete method of Vase Application
+
+FINALLY THE APPLICATION IS BUILDED SUCCESSFULLY :)
+
+NOW one more step is I have to publish this application to the Azure
+
 

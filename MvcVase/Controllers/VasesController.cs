@@ -20,9 +20,35 @@ namespace MvcVase.Controllers
         }
 
         // GET: Vases
-        public async Task<IActionResult> Index()
+
+        // Change the Index method for the add search function by the Vases Name:
+
+        public async Task<IActionResult> Index(string vaseMaterial, string searchString)
         {
-            return View(await _context.Vase.ToListAsync());
+            // Use LINQ to get list of genres.
+            IQueryable<string> materialQuery = from m in _context.Vase
+                                            orderby m.Material
+                                            select m.Material;
+
+            var vases = from m in _context.Vase 
+                         select m;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                vases = vases.Where(s => s.Name.Contains(searchString));
+            }
+
+            if (!string.IsNullOrEmpty(vaseMaterial))
+            {
+                vases = vases.Where(x => x.Material == vaseMaterial);
+            }
+
+            var vaseMaterialVM = new VaseMaterialViewModel {
+                Materials = new SelectList(await materialQuery.Distinct().ToListAsync()),
+                Vases = await vases.ToListAsync()
+            };
+
+            return View(vaseMaterialVM);
         }
 
         // GET: Vases/Details/5
@@ -52,9 +78,9 @@ namespace MvcVase.Controllers
         // POST: Vases/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
+        [HttpPost] //Edit method can be invoked by the POST method we can set that as a GET as well
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Type,Material,Shape,Antique")] Vase vase)
+        public async Task<IActionResult> Create([Bind("Id,Name,Type,Material,Shape,Antique,Rating")] Vase vase)  // Added new Bind value for Rating
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +112,7 @@ namespace MvcVase.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Type,Material,Shape,Antique")] Vase vase)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Type,Material,Shape,Antique,Rating")] Vase vase)
         {
             if (id != vase.Id)
             {
