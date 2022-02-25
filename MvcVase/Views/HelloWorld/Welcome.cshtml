@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "Welcome";
+}
+
+<h2>Welcome</h2>
+
+<ul>
+    @for (int i = 0; i < (int)ViewData["NumTimes"]; i++)  // Looping the data and gave the output ntime of name value to the welcome page
+    {
+        <li>@ViewData["Message"]</li>
+    }
+</ul>

@@ -69,3 +69,36 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+
+/*Chnage the css properties of the about page */
+
+h1.vaseH1{
+    text-align:center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: khaki;
+    color: blueviolet;
+}
+div.about{
+    text-align:left;
+    font-family:sans-serif;
+    background-color:antiquewhite;
+    margin-right: 10px;
+    padding-left:10px;
+    display:block;
+}
+
+figure.vase {
+    background-color:white;
+    padding-left:10px;
+    float: right;
+    margin-bottom: 80px;
+    padding-bottom:55px;
+}
+
+img.vaseImg{
+
+    display:block;
+    float:right;
+}
+
+/*Finally my about page look better than previous...... :)*/
