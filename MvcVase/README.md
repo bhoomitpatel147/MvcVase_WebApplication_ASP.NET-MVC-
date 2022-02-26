@@ -259,4 +259,12 @@ FINALLY THE APPLICATION IS BUILDED SUCCESSFULLY :)
 
 NOW one more step is I have to publish this application to the Azure
 
+2022-02-25
+
+2140
+Last the Azure web is ready for this MvcVase Application
+
+https://mvcvasebhoomitpatel0780326.azurewebsites.net
+
+Thank You!!!
 
